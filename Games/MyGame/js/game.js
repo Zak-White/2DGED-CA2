@@ -240,6 +240,7 @@ function LoadPlayerSprite() {
 
   //step 8 - add to the object manager so it is drawn (if we set StatusType.Drawn) and updated (if we set StatusType.Updated)
   objectManager.Add(playerSprite); //add player sprite
+  
 }
 
 function LoadPickupSprites() {
