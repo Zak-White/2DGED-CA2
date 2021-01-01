@@ -235,7 +235,8 @@ class PlayerController {
         let sprite = sprites[i];
 
         if (Collision.Intersects(parent, sprite)) {
-          //add your code here...
+          lives -= 1;
+          objectManager.Remove(sprite)
         }
       }
     }

@@ -140,7 +140,11 @@ function UpdateGameState(gameTime) {
     scoreElement.style.display = "block";
     scoreElement.innerHTML = score;
   }
-
+  var livesElement = document.getElementById("ui_lives");
+  if(livesElement){
+    livesElement.style.display="block";
+    livesElement.innerHTML = lives;
+  }
   //if score == 100 then show "You Win! or if time exceeds 60000ms then "Time Up! You Lose!"
 }
 
