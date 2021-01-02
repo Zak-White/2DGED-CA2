@@ -113,10 +113,10 @@ function LoadDebug(bDebugEnabled) {
 //stores object manager which holds all sprites
 
 const cueArray = [
-  new AudioCue("pickup", 1, 1, false, 1),
+  new AudioCue("pickup", 0.5, 1, false, 1),
   new AudioCue("gameover", 1, 1, false, 1),
-  new AudioCue("jumpSound", 1, 1, false, 0),
-  new AudioCue("backgroundMusic", 0.6, 1, true, 0),
+  new AudioCue("jumpSoundEffect", 1, 1, false, 0),
+  new AudioCue("backgroundMusic", 0.01, 1, true, 0),
   //add more cues here but make sure you load in the HTML!
 ];
 

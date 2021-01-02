@@ -179,7 +179,7 @@ class PlayerController {
 
       //add your code here...
       //set take to "player_jump"
-      soundManager.Play("jumpSound"); //obviously we would source and load an appropriate "jump" sound here
+      soundManager.Play("jumpSoundEffect"); //obviously we would source and load an appropriate "jump" sound here
     }
   }
 
