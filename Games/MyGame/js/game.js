@@ -146,6 +146,12 @@ function UpdateGameState(gameTime) {
     livesElement.innerHTML = lives;
   }
   //if score == 100 then show "You Win! or if time exceeds 60000ms then "Time Up! You Lose!"
+  window.addEventListener('keydown', function (e){
+   var Key=e.keyCode
+   if(key === 27){
+     togglePause();
+   }
+  });
 }
 
 /**
@@ -179,9 +185,23 @@ function StartGame(gameTime) {
   //unpause game
   objectManager.StatusType = StatusType.Drawn | StatusType.Updated;
 
+
   //play sound
   soundManager.Play("backgroundMusic");
 }
+  //pause game
+  function togglePause()
+  {
+    if (!paused)
+    {
+      paused=true;
+    } 
+    else if(paused)
+    {
+      paused=false;
+    }
+    
+  }
 
 function LoadSprites() {
   LoadPlayerSprite();
