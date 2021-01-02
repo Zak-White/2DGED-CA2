@@ -147,8 +147,9 @@ function UpdateGameState(gameTime) {
   }
   //if score == 100 then show "You Win! or if time exceeds 60000ms then "Time Up! You Lose!"
   window.addEventListener('keydown', function (e){
-   var Key=e.keyCode
-   if(key === 27){
+  
+   if(keyboardManager.IsKeyDown === 27)//esc key
+   {
      togglePause();
    }
   });
