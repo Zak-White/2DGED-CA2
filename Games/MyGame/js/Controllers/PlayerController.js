@@ -236,7 +236,8 @@ class PlayerController {
 
         if (Collision.Intersects(parent, sprite)) {
           lives -= 1;
-          objectManager.Remove(sprite)
+          objectManager.Remove(sprite);
+          soundManager.Play("oof");
         }
       }
     }

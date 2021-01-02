@@ -13,7 +13,7 @@ var ctx = cvs.getContext("2d");
 
 //stores elapsed and total game time
 var gameTime = null;
-
+var screenBounds = new Rect(0,0,1024, 768);
 //managers
 var objectManager = null;
 var soundManager = null;
@@ -117,6 +117,7 @@ const cueArray = [
   new AudioCue("gameover", 1, 1, false, 1),
   new AudioCue("jumpSoundEffect", 1, 1, false, 0),
   new AudioCue("backgroundMusic", 0.01, 1, true, 0),
+  new AudioCue("oof", 1, 1, false, 0),
   //add more cues here but make sure you load in the HTML!
 ];
 
@@ -316,9 +317,9 @@ function LoadPickupSprites() {
     );
 
     // add the collision surface to test for collisions against
-    pickupSprite.collisionPrimitive = new CircleCollisionPrimitive(
+    pickupSprite.collisionPrimitive = new RectCollisionPrimitive(
       pickupSprite.Transform2D,
-      15
+      0
     );
 
     //add to the object manager
