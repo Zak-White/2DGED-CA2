@@ -148,7 +148,7 @@ function UpdateGameState(gameTime) {
   //if score == 100 then show "You Win! or if time exceeds 60000ms then "Time Up! You Lose!"
   window.addEventListener('keydown', function (e){
   
-   if(keyboardManager.IsKeyDown === 27)//esc key
+   if(keyboardManager.IsKeyDown(Keys.Escape))//esc key
    {
      togglePause();
    }
@@ -277,7 +277,7 @@ function LoadPickupSprites() {
   ];
 
   //set the take name for the animation - we could change to "gold_glint" easily
-  var takeName = "ruby_glint";
+  var takeName = "Book";
 
   //loop through the translation array
   for (var translation of pickTranslationArray) {
@@ -307,7 +307,7 @@ function LoadPickupSprites() {
 
     //create the sprite and give it type "Pickup"
     let pickupSprite = new Sprite(
-      "gold",
+      "Book",
       ActorType.Pickup,
       StatusType.Updated | StatusType.Drawn,
       transform,

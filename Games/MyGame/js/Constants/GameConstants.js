@@ -72,25 +72,11 @@ static ENEMY_ANIMATION_DATA = Object.freeze({
 
 static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
   id: "collectibles_animation_data",
-  spriteSheet: document.getElementById("spritesheet_main"),
+  spriteSheet: document.getElementById("books"),
   alpha: 1,
   actorType: ActorType.Pickup,
   takes: {  
-    "sapphire_glint" :  {
-      fps: 6,
-      maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
-      startCellIndex: 0,
-      endCellIndex: 4,
-      boundingBoxDimensions: new Vector2(46, 50), 
-      cellData: [
-        new Rect(185, 138, 30, 35),
-        new Rect(220, 138, 30, 35),
-        new Rect(258, 138, 30, 35),
-        new Rect(294, 138, 30, 35),
-        new Rect(331, 138, 30, 35)
-      ]
-    },
-    "ruby_glint" :  {
+    "Book" :  {
       fps: 6,
       maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
       startCellIndex: 0,
@@ -102,18 +88,6 @@ static COLLECTIBLES_ANIMATION_DATA = Object.freeze({
         new Rect(76, 138, 30, 35),
         new Rect(112, 138, 30, 35),
         new Rect(148, 138, 30, 35)
-      ]
-    },
-    "gold_glint" :  {
-      fps: 6,
-      maxLoopCount: -1, //-1 = always, 0 = run once, N = run N times
-      startCellIndex: 0,
-      endCellIndex: 2,
-      boundingBoxDimensions: new Vector2(30, 30), 
-      cellData: [
-        new Rect(65, 540, 30, 30),
-        new Rect(96, 540, 30, 30),
-        new Rect(128, 540, 30, 30)
       ]
     }
   }

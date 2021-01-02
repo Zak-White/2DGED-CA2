@@ -114,6 +114,7 @@ const Keys = Object.freeze({
   Z : "KeyZ",
   Enter: "Enter",
   Space: "Space",
+  Escape: "escape",
   Numpad0 : "Numpad0",
   Numpad1 : "Numpad1",
   Numpad2 : "Numpad2",
