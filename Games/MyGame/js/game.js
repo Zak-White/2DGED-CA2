@@ -118,6 +118,7 @@ const cueArray = [
   new AudioCue("jumpSoundEffect", 1, 1, false, 0),
   new AudioCue("backgroundMusic", 0.01, 1, true, 0),
   new AudioCue("oof", 1, 1, false, 0),
+  new AudioCue("yay", 1, 1, false, 0),
   //add more cues here but make sure you load in the HTML!
 ];
 
@@ -157,6 +158,7 @@ function UpdateGameState(gameTime) {
   if(score==50){
     var message = document.getElementById("menu_winlose");
     message.style.display="block";
+    soundManager.Play("yay");
   }
 }
 
