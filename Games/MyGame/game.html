@@ -13,17 +13,23 @@
             <div id="ui_lives" style="display: none;">Lives</div>
             <canvas id="main_canvas" width="1024" height="768"></canvas>
         </div>
+       
+            <div id="ui_text">Paused</div>
                 <div id="menu_opening" style="display: block;">
             <div id="ui_text">Press Enter</div>
         </div>
         <div id="menu_winlose" style="display: none;">
             <div id="ui_text" >You Won!</div>
         </div>
+        <div id="menu_losedeath" style="display: none;">
+            <div id="ui_text" >You died!</div>
+        </div>
     </div>
     <!---------------------------- Assets ---------------------------->
     <!-- Load the audio assets -->
     <!-- NAME, URL, ACCESSED DEC 2020-->
     <audio preload="auto" id="pickup" src="assets/sounds/pickup.wav"></audio>
+    <audio preload="auto" id="death" src="assets/sounds/death.wav"></audio>
     <audio preload="auto" id="yay" src="assets/sounds/yay.wav"></audio>
     <audio preload="auto" id="gameover" src="assets/sounds/gameover.wav"></audio>
     <audio preload="auto" id="jumpSoundEffect" src="assets/sounds/jumpSoundEffect.wav"></audio>

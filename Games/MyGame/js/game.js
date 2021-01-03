@@ -119,10 +119,11 @@ const cueArray = [
   new AudioCue("backgroundMusic", 0.01, 1, true, 0),
   new AudioCue("oof", 1, 1, false, 0),
   new AudioCue("yay", 1, 1, false, 0),
+  new AudioCue("death", 1, 1, false, 0),
   //add more cues here but make sure you load in the HTML!
 ];
 
-var lives = 5;
+var lives = 1;
 var score = 0;
 //#endregion
 
@@ -153,12 +154,18 @@ function UpdateGameState(gameTime) {
    if(keyboardManager.IsKeyDown(Keys.Escape))//esc key
    {
      togglePause();
+     paused=true;
    }
   });
   if(score==50){
     var message = document.getElementById("menu_winlose");
     message.style.display="block";
     soundManager.Play("yay");
+  }
+  if(lives==0){
+    var message2 = document.getElementById("menu_losedeath");
+    message2.style.display="block";
+    soundManager.Play("death");
   }
 }
 
@@ -200,14 +207,10 @@ function StartGame(gameTime) {
   //pause game
   function togglePause()
   {
-    if (!paused)
-    {
-      paused=true;
-    } 
-    else if(paused)
-    {
-      paused=false;
-    }
+      if(paused=true)
+      {
+        document.getElementById("Pause_Menu").style.display = "none";
+      }
     
   }
 
@@ -278,11 +281,11 @@ function LoadPlayerSprite() {
 function LoadPickupSprites() {
   //to add lots of pickups we can also just create a local array of positions for the pickups
   let pickTranslationArray = [
-    new Vector2(450, 525),
-    new Vector2(525, 525),
-    new Vector2(725, 425),
+    new Vector2(450, 400),
+    new Vector2(525, 650),
+    new Vector2(725, 650),
     new Vector2(835, 525),
-    new Vector2(625, 625),
+    new Vector2(625, 400),
   ];
 
   //set the take name for the animation - we could change to "gold_glint" easily
