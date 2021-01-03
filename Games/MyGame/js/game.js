@@ -154,6 +154,10 @@ function UpdateGameState(gameTime) {
      togglePause();
    }
   });
+  if(score==50){
+    var message = document.getElementById("menu_winlose");
+    message.style.display="block";
+  }
 }
 
 /**
@@ -275,6 +279,8 @@ function LoadPickupSprites() {
     new Vector2(450, 525),
     new Vector2(525, 525),
     new Vector2(725, 425),
+    new Vector2(835, 525),
+    new Vector2(625, 625),
   ];
 
   //set the take name for the animation - we could change to "gold_glint" easily
