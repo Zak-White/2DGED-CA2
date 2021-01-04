@@ -114,7 +114,6 @@ function LoadDebug(bDebugEnabled) {
 
 const cueArray = [
   new AudioCue("pickup", 0.5, 1, false, 1),
-  new AudioCue("gameover", 1, 1, false, 1),
   new AudioCue("jumpSoundEffect", 1, 1, false, 0),
   new AudioCue("backgroundMusic", 0.01, 1, true, 0),
   new AudioCue("oof", 1, 1, false, 0),
